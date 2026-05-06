@@ -93,7 +93,7 @@ class Area:
         if resp:
             features = resp.get("data", {}).get("features", [])
             if features:
-                feature = transform_to_wgs(features[0])
+                feature = features[0]
                 if self._matches_criteria(feature):
                     self.feature = feature
                     return feature
